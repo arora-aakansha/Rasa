@@ -195,14 +195,15 @@ class ValidateName(FormValidationAction):
     
         for i in slot_value:
             print(slot_value)
-            check=Repo.check(slot_value)
+            check=Repo.check(i)
             print("check value")
             print(check)
             if check==True:
                 dispatcher.utter_message(text="does not belong to database")
                 return{"name_list":None}
-            else:
-                return{"name_list":slot_value}
+                
+        return{"name_list":slot_value}
+                
 
               
     
