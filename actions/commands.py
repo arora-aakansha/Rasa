@@ -45,3 +45,11 @@ class Repo:
     #conn.execute("DELETE FROM demo WHERE EMPLOYEE_CODE='{value}'")
     conn.execute(f"DELETE FROM demo WHERE EMPLOYEE_CODE='{value}'")
     conn.commit()
+  
+  @staticmethod
+  def check(value):
+    #conn.execute("DELETE FROM demo WHERE EMPLOYEE_CODE='{value}'")
+    cursor=conn.cursor()
+    cursor.execute(f"SELECT * FROM demo WHERE NAME='{value}'")
+    ans= cursor.fetchall()
+    return len(ans)==0

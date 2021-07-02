@@ -193,13 +193,16 @@ class ValidateName(FormValidationAction):
             dispatcher.utter_message(text="No name mentioned")
             return{'name_list':None}
     
-        for i in range(len(slot_value)):
-            table= etl.fromdb(connection, 'select * from demo WHERE NAME={slot_value[i]}')
-            if(len(table)==0):
+        for i in slot_value:
+            print(slot_value)
+            check=Repo.check(slot_value)
+            print("check value")
+            print(check)
+            if len(check)==False:
                 dispatcher.utter_message(text="does not belong to database")
                 return{"name_list":None}
-        #     else:
-        #         return{"name_list":slot_value}
+            else:
+                return{"name_list":slot_value}
 
               
     
