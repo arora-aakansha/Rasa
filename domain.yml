@@ -18,6 +18,7 @@ intents:
 - change_col_name
 - remove_column
 - nominate_names
+- name_of_nominee
 entities:
 - change_name
 - cid
@@ -107,5 +108,5 @@ forms:
   Nomination_name_form:
     required_slots:
       name_list:
-      - type: from_text
+      - type: from_entity
         entity: nominee

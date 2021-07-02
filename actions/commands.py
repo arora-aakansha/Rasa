@@ -48,8 +48,8 @@ class Repo:
   
   @staticmethod
   def check(value):
-    #conn.execute("DELETE FROM demo WHERE EMPLOYEE_CODE='{value}'")
-    cursor=conn.cursor()
-    cursor.execute(f"SELECT * FROM demo WHERE NAME='{value}'")
-    ans= cursor.fetchall()
+    value += "%"
+    cur = conn.cursor()
+    cur.execute("""SELECT * FROM demo WHERE NAME like ?""", (value,))
+    ans=cur.fetchall()
     return len(ans)==0

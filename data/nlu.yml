@@ -83,75 +83,75 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
-- intent: name
-  examples: |
-    - My name is [Aakansha](name)
-    - My name is [Rachit](name)
-    - My name is [Neha](name)
-    - My name is [Abhinav](name)
-    - My name is [Shruti](name)
-    - My name is [aakansha](name)
-    - My name is [rachit](name)
-    - My name is [neha](name)
-    - My name is [abhinav](name)
-    - My name is [shruti](name)
-    - I am [Aakansha](name)
-    - I am [aakansha](name)
-    - I am [Abhinav](name)
-    - I am [abhinav](name)
-    - I am [Rachit](name)
-    - [Rachit](name)
-    - [Aakansha](name)
-    - [rachit](name)
-    - [aakansha](name)
-    - [Abhinav](name)
-    - [Shruti](name)
-    - [Aakansha](name) is my name
-    - [Snehil](name) is my name
-    - [Nishant](name) is my name
-    - [OddlyWitch](name) is my name
-    - [abhinav](name)
-    - [shreya](name)
-    - [aakansha](name) [rachit](name)
-- intent: cid
-  examples: |
-    - My cid is [1](cid)
-    - My cid is [4](cid)
-    - My cid is [90](cid)
-    - My cid is [123](cid)
-    - My cid is [678](cid)
-    - My cid is [45](cid)
-    - My cid is [89](cid)
-    - My cid is [11](cid)
-    - My cid is [3](cid)
-    - [10](cid)
-    - [15](cid)
-    - [17](cid)
-    - [16](cid)
-    - [14](cid)
-    - [12](cid)
-    - [1](cid)
-    - [177](cid)
-    - [3](cid)
-    - [7](cid)
-    - [44](cid)
-- intent: email
-  examples: |
-    - My email is [Aakansha@arora.com](email)
-    - My email is [xyz@gmail.com](email)
-    - My email is [XYZ@gmail.com](email)
-    - My email is [abc@yahoo.com](email)
-    - My email is [ABC@yahoo.com](email)
-    - My email is [amma@ziba.com](email)
-    - My email is [Aakansha@ibm.com](email)
-    - [Aakansha@arora.com](email)
-    - [xyz@gmail.com](email)
-    - [XYZ@gmail.com](email)
-    - [Amma@zibz.com](email)
-    - [Aakansha@ibm.com](email)
-    - [Aakansha@bitd.com](email)
-    - [aakansha@arora.com](email)
-    - [abc@gmail.com](email)
+# - intent: name
+#   examples: |
+#     - My name is [Aakansha](name)
+#     - My name is [Rachit](name)
+#     - My name is [Neha](name)
+#     - My name is [Abhinav](name)
+#     - My name is [Shruti](name)
+#     - My name is [aakansha](name)
+#     - My name is [rachit](name)
+#     - My name is [neha](name)
+#     - My name is [abhinav](name)
+#     - My name is [shruti](name)
+#     - I am [Aakansha](name)
+#     - I am [aakansha](name)
+#     - I am [Abhinav](name)
+#     - I am [abhinav](name)
+#     - I am [Rachit](name)
+#     - [Rachit](name)
+#     - [Aakansha](name)
+#     - [rachit](name)
+#     - [aakansha](name)
+#     - [Abhinav](name)
+#     - [Shruti](name)
+#     - [Aakansha](name) is my name
+#     - [Snehil](name) is my name
+#     - [Nishant](name) is my name
+#     - [OddlyWitch](name) is my name
+#     - [abhinav](name)
+#     - [shreya](name)
+#     - [aakansha](name) [rachit](name)
+# - intent: cid
+#   examples: |
+#     - My cid is [1](cid)
+#     - My cid is [4](cid)
+#     - My cid is [90](cid)
+#     - My cid is [123](cid)
+#     - My cid is [678](cid)
+#     - My cid is [45](cid)
+#     - My cid is [89](cid)
+#     - My cid is [11](cid)
+#     - My cid is [3](cid)
+#     - [10](cid)
+#     - [15](cid)
+#     - [17](cid)
+#     - [16](cid)
+#     - [14](cid)
+#     - [12](cid)
+#     - [1](cid)
+#     - [177](cid)
+#     - [3](cid)
+#     - [7](cid)
+#     - [44](cid)
+# - intent: email
+#   examples: |
+#     - My email is [Aakansha@arora.com](email)
+#     - My email is [xyz@gmail.com](email)
+#     - My email is [XYZ@gmail.com](email)
+#     - My email is [abc@yahoo.com](email)
+#     - My email is [ABC@yahoo.com](email)
+#     - My email is [amma@ziba.com](email)
+#     - My email is [Aakansha@ibm.com](email)
+#     - [Aakansha@arora.com](email)
+#     - [xyz@gmail.com](email)
+#     - [XYZ@gmail.com](email)
+#     - [Amma@zibz.com](email)
+#     - [Aakansha@ibm.com](email)
+#     - [Aakansha@bitd.com](email)
+#     - [aakansha@arora.com](email)
+#     - [abc@gmail.com](email)
 - intent: Insert
   examples: |
     - I want to insert data
@@ -196,4 +196,20 @@ nlu:
     - names to nominate
     - I want to nominate
     - I want to nominate names
-    
+- intent: name_of_nominee
+  examples: |
+    - [Aakansha](nominee)
+    - [aakansha](nominee)
+    - [Abhinav](nominee)
+    - [abhi](nominee)
+    - [Prachi](nominee)
+    - [Aakansha](nominee) [Abhinav](nominee)
+    - [sakshi](nominee) [soniya](nominee)
+    - [prateek](nominee) [Jasmeet](nominee)
+    - [John](nominee) [James](nominee)
+    - [Jira](nominee) [Aaaki](nominee)
+    - [yyyy](nominee) [xxx](nominee)
+   
+
+
+
