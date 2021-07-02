@@ -72,6 +72,8 @@ responses:
   - text: Please Enter email
   utter_ask_change_name:
   - text: Please Enter new Column Name
+  utter_ask_name_list:
+  - text: Please Enter name for nominees
   utter_display:
   - text: The  name of {cid} is {name} and email address is {email}
   utter_submit:
@@ -87,7 +89,8 @@ actions:
 - action_select
 - action_show_petl
 - utter_help_you
-- validate_name
+- validate_Nominee_name_form
+- action_add_nominee
 forms:
   Insert_form:
     required_slots:

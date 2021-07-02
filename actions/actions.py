@@ -1,9 +1,10 @@
 from typing import Any, Text, Dict, List
 
-from rasa_sdk import Action, Tracker
+from rasa_sdk import Action, Tracker, FormValidationAction
 from rasa_sdk.executor import CollectingDispatcher
 import sqlite3
 import petl as etl
+from rasa_sdk.types import DomainDict
 
 from . import Repo
 
@@ -147,17 +148,61 @@ class ActionRemoveCol(Action):
 
         return []
 
-class ValidateName(Action):
+class ActionAddNominee(Action):
 
     def name(self) -> Text:
-        return "validate_name"
+        return "action_add_nominee"
 
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         
-        print(tracker.get_slot('name_list'))
+        n=[]
+        name_list=tracker.get_slot('name_list')
+        print("slot"+tracker.get_slot('name_list'))
+        print(name_list)
+        for i in name_list:
+            n.append(i)
+        dispatcher.utter_message(text="are added to list")
+        print("new list")
+        print(n)
 
         return []
+
+class ValidateName(FormValidationAction):
+
+    def name(self) -> Text:
+        return "validate_Nominee_name_form"
+    
+    def validate_name_list(
+        self,
+        slot_value: Any,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: DomainDict,
+    ) -> Dict[Text, Any]:
+        """Validate name_list array"""
+        name_list=[]
+        print(slot_value)
+
+        connection=sqlite3.connect('rasa.db')
+        table= etl.fromdb(connection, 'select * from demo')
+        flag=0
+        if len(slot_value)==0:
+            dispatcher.utter_message(text="No name mentioned")
+            return{'name_list':None}
+    
+        # for i in range(len(slot_value)):
+        #     table= etl.fromdb(connection, 'select * from demo WHERE NAME={slot_value[i]}')
+        #     if(len(table)==0):
+        #         dispatcher.utter_message(text=names[i]+" does not belong to database")
+        #         return{"name_list":[]}
+        #     else:
+        #         return{"name_list":slot_value}
+
+              
+    
+
+
     
 

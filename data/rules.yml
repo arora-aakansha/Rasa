@@ -79,6 +79,6 @@ rules:
   - active_loop: null
   - slot_was_set:
     - requested_slot: null
-  - action: validate_name
+  - action: action_add_nominee
   - action: utter_submit
   - action: action_restart

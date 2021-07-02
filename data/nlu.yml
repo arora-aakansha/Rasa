@@ -190,11 +190,5 @@ nlu:
     - discard column from table
 - intent: nominate_name
   examples: |
-    - nominate a candidate
-    - nominate [Aakansha](nominee)
-    - nominate [Aakansha](nominee) and [Sakshi](nominee)
-    - nominate [Abhinave](nominee)
-    - nominate [aakansha](nominee) and [Prateek](nominee)
-    - nominate [prateek](nominee)
-    - nominate [prateek](nominee), [jasmeet](nominee) and [Rachit](nominee)
-   
+    - nominate a candidates
+    
