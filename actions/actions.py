@@ -159,7 +159,8 @@ class ActionAddNominee(Action):
         
         n=[]
         name_list=tracker.get_slot('name_list')
-        print("slot"+tracker.get_slot('name_list'))
+        print("slot")
+        print(tracker.get_slot('name_list'))
         print(name_list)
         for i in name_list:
             n.append(i)
@@ -172,7 +173,7 @@ class ActionAddNominee(Action):
 class ValidateName(FormValidationAction):
 
     def name(self) -> Text:
-        return "validate_Nominee_name_form"
+        return "validate_Nomination_name_form"
     
     def validate_name_list(
         self,
@@ -192,11 +193,11 @@ class ValidateName(FormValidationAction):
             dispatcher.utter_message(text="No name mentioned")
             return{'name_list':None}
     
-        # for i in range(len(slot_value)):
-        #     table= etl.fromdb(connection, 'select * from demo WHERE NAME={slot_value[i]}')
-        #     if(len(table)==0):
-        #         dispatcher.utter_message(text=names[i]+" does not belong to database")
-        #         return{"name_list":[]}
+        for i in range(len(slot_value)):
+            table= etl.fromdb(connection, 'select * from demo WHERE NAME={slot_value[i]}')
+            if(len(table)==0):
+                dispatcher.utter_message(text="does not belong to database")
+                return{"name_list":None}
         #     else:
         #         return{"name_list":slot_value}
 

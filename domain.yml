@@ -89,7 +89,7 @@ actions:
 - action_select
 - action_show_petl
 - utter_help_you
-- validate_Nominee_name_form
+- validate_Nomination_name_form
 - action_add_nominee
 forms:
   Insert_form:
