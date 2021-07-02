@@ -198,7 +198,7 @@ class ValidateName(FormValidationAction):
             check=Repo.check(slot_value)
             print("check value")
             print(check)
-            if check==False:
+            if check==True:
                 dispatcher.utter_message(text="does not belong to database")
                 return{"name_list":None}
             else:
