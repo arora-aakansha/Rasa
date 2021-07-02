@@ -1,0 +1,146 @@
+version: "2.0"
+
+stories:
+
+# - story: happy path
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: mood_great
+#   - action: utter_happy
+
+# - story: sad path 1
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: mood_unhappy
+#   - action: utter_cheer_up
+#   - action: utter_did_that_help
+#   - intent: affirm
+#   - action: utter_happy
+
+# - story: sad path 2
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: mood_unhappy
+#   - action: utter_cheer_up
+#   - action: utter_did_that_help
+#   - intent: deny
+#   - action: 
+  
+
+# - story: how can I help you?
+#   steps:
+#   - intent: greet
+#   - action: utter_help_you
+
+# - story: insert
+#   steps:
+#   - intent: insert
+#   - action: action_ask_name
+#   - intent: name
+#   - action: action_ask_cid
+#   - intent: cid
+#   - action: action_ask_email
+#   - intent: email
+#   - action: action_save
+
+- story: get all
+  steps:
+  - intent: get
+  - action: action_show_petl
+
+- story: remove column
+  steps:
+  - intent: remove_column
+  - action: action_remove_col
+
+# - story:  delete
+#   steps:
+#   - intent: delete
+#   - action: action_ask_cid
+#   - intent: cid
+#   - action: action_delete
+
+  
+
+
+# - story: interactive_story_1
+#   steps:
+#   - intent: greet
+#   - action: utter_help_you
+#   - intent: name
+#     entities:
+#     - name: shreya
+#   - slot_was_set:
+#     - name: shreya
+#   - action: action_ask_cid
+#   - intent: affirm
+
+# - story: interactive_story_2
+#   steps:
+#   - intent: greet
+#   - action: utter_help_you
+#   - intent: Insert
+#   - action: action_ask_name
+#   - intent: nlu_fallback
+#   - action: action_ask_name
+#   - intent: name
+#     entities:
+#     - name: aakansha
+#   - slot_was_set:
+#     - name: aakansha
+#   - action: action_ask_cid
+#   - intent: cid
+#     entities:
+#     - cid: '7'
+#   - slot_was_set:
+#     - cid: '7'
+#   - action: action_ask_email
+#   - intent: email
+#     entities:
+#     - email: abc@gmail.com
+#   - slot_was_set:
+#     - email: abc@gmail.com
+#   - action: action_save
+
+# - story: interactive_story_1
+#   steps:
+#   - intent: greet
+#   - action: utter_help_you
+
+# - story: interactive_story_2
+#   steps:
+#   - intent: greet
+#   - action: utter_help_you
+#   - intent: Insert
+#   - action: action_ask_name
+#   - intent: name
+#     entities:
+#     - name: Rachit
+#   - slot_was_set:
+#     - name: Rachit
+#   - action: action_ask_cid
+#   - intent: cid
+#     entities:
+#     - cid: '44'
+#   - slot_was_set:
+#     - cid: '44'
+#   - action: action_ask_email
+#   - intent: email
+#     entities:
+#     - email: abc@gmail.com
+#   - slot_was_set:
+#     - email: abc@gmail.com
+#   - action: action_save
+#   - intent: Insert
+
+- story: interactive_story_1
+  steps:
+  - intent: name
+    entities:
+    - name: aakansha
+    - name: rachit
+  - slot_was_set:
+    - name: rachit

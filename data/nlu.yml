@@ -1,0 +1,200 @@
+version: "2.0"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+- intent: name
+  examples: |
+    - My name is [Aakansha](name)
+    - My name is [Rachit](name)
+    - My name is [Neha](name)
+    - My name is [Abhinav](name)
+    - My name is [Shruti](name)
+    - My name is [aakansha](name)
+    - My name is [rachit](name)
+    - My name is [neha](name)
+    - My name is [abhinav](name)
+    - My name is [shruti](name)
+    - I am [Aakansha](name)
+    - I am [aakansha](name)
+    - I am [Abhinav](name)
+    - I am [abhinav](name)
+    - I am [Rachit](name)
+    - [Rachit](name)
+    - [Aakansha](name)
+    - [rachit](name)
+    - [aakansha](name)
+    - [Abhinav](name)
+    - [Shruti](name)
+    - [Aakansha](name) is my name
+    - [Snehil](name) is my name
+    - [Nishant](name) is my name
+    - [OddlyWitch](name) is my name
+    - [abhinav](name)
+    - [shreya](name)
+    - [aakansha](name) [rachit](name)
+- intent: cid
+  examples: |
+    - My cid is [1](cid)
+    - My cid is [4](cid)
+    - My cid is [90](cid)
+    - My cid is [123](cid)
+    - My cid is [678](cid)
+    - My cid is [45](cid)
+    - My cid is [89](cid)
+    - My cid is [11](cid)
+    - My cid is [3](cid)
+    - [10](cid)
+    - [15](cid)
+    - [17](cid)
+    - [16](cid)
+    - [14](cid)
+    - [12](cid)
+    - [1](cid)
+    - [177](cid)
+    - [3](cid)
+    - [7](cid)
+    - [44](cid)
+- intent: email
+  examples: |
+    - My email is [Aakansha@arora.com](email)
+    - My email is [xyz@gmail.com](email)
+    - My email is [XYZ@gmail.com](email)
+    - My email is [abc@yahoo.com](email)
+    - My email is [ABC@yahoo.com](email)
+    - My email is [amma@ziba.com](email)
+    - My email is [Aakansha@ibm.com](email)
+    - [Aakansha@arora.com](email)
+    - [xyz@gmail.com](email)
+    - [XYZ@gmail.com](email)
+    - [Amma@zibz.com](email)
+    - [Aakansha@ibm.com](email)
+    - [Aakansha@bitd.com](email)
+    - [aakansha@arora.com](email)
+    - [abc@gmail.com](email)
+- intent: Insert
+  examples: |
+    - I want to insert data
+    - Insert
+    - insert data
+    - Insert Data
+    - data insert
+    - insert
+- intent: get
+  examples: |
+    - get
+    - get data
+    - show
+    - show Data
+    - I want see data
+    - check
+    - check data
+- intent: Delete
+  examples: |
+    - delete
+    - remove
+    - delete data
+    - Delete the data
+- intent: change_col_name
+  examples: |
+    - change name
+    - change column name
+    - fix column name
+    - correct column name
+    - correct name
+- intent: remove_column
+  examples: |
+    - remove column
+    - discard the column from table
+    - remove column from table
+    - discard column from table
+- intent: nominate_name
+  examples: |
+    - nominate a candidate
+    - nominate [Aakansha](nominee)
+    - nominate [Aakansha](nominee) and [Sakshi](nominee)
+    - nominate [Abhinave](nominee)
+    - nominate [aakansha](nominee) and [Prateek](nominee)
+    - nominate [prateek](nominee)
+    - nominate [prateek](nominee), [jasmeet](nominee) and [Rachit](nominee)
+   
